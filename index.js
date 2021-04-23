@@ -9,7 +9,7 @@ const newFile = [];
     movies.map((movie) => {
       const categories = movie.listed_in.split(",");
       categories.map((categorie) => {
-        newFile.push({ ...movie, listed_in: categorie });
+        newFile.push({ ...movie, listed_in: categorie.trim() });
       });
     });
     fs.writeFileSync("netflix_titles_new.csv", parse(newFile));
