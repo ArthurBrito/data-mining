@@ -12,6 +12,6 @@ const newFile = [];
         newFile.push({ ...movie, listed_in: categorie.trim() });
       });
     });
-    fs.writeFileSync("netflix_titles_new.csv", parse(newFile));
+    fs.writeFileSync("netflix_titles_listed_in.csv", parse(newFile));
   });
 })();
